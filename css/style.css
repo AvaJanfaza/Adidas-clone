@@ -7,6 +7,12 @@
     list-style: none;
 }
 
+
+body{
+    height: 3000px;
+}
+
+
 /* Styling Top Announcement Bar at the very top of the page */
 .top-bar{
     height: 40px;
@@ -27,4 +33,116 @@
     color: white;
     font-size: 30px;
 }
+/* styling nav bar */
+nav{
+    height: 80px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--main-padding);
+    position: sticky;
+    top: 40px;
+    left: 0;
+    right: 0;
+}
+.nav-logo > img{
+    width: 65px;
+    height: 65px;
+}
 
+/* primary menu-horizontally centered within the nav */
+.nav-menu{
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Emphasized links : MEN , WOMEN , KIDS */
+.nav-link-bold{
+    color: black;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* Standard links : BACK TO SCHOOL , SALE , SPORTS , NEW & TRENDING */
+.nav-link{
+    color: black;
+    font-family: var(--font-heading);
+    font-weight: 100;
+    font-size: 18px;
+}
+
+/* Right side wrapper : utility links row + tools row */
+.nav-utility{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Helper links row (store finder , help , etc.) + region flag */
+.nav-utility-links{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* List of helper links */
+.nav-utility-list{
+    display: flex;
+    gap: 15px;
+}
+.nav-utility-list > li > a{
+    color: black;
+    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    font-weight: 100;
+}
+.nav-utility-list > li > a:hover{
+    border-bottom: 1px solid black;
+}
+
+/* Region flag icon size */
+.nav-utility-links img{
+    height: 10px;
+    width: 20px;
+}
+
+/* Row containing search input + account/wishlist/cart icon */
+.nav-tools{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Container for search input + icons */
+.nav-search-input{
+    position: relative;
+}
+.nav-search-input > input{
+    height: 30px;
+    width: 200px;
+    background-color: #e5e5e5;
+    border: none;
+    padding: 0 2%;
+}
+.nav-search-input > input::placeholder{
+    color: black;
+    opacity: 0.7;
+}
+
+/* Magnifying glass icon inside the search input */
+.nav-search-input > i{
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+}
+.nav-tools > a > i{
+    font-size: 25px;
+    color: black;
+}
