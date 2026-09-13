@@ -1,0 +1,30 @@
+/* Normalizes default browser styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Styling Top Announcement Bar at the very top of the page */
+.top-bar{
+    height: 40px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.top-bar > p{
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.top-bar > i{
+    color: white;
+    font-size: 30px;
+}
+
