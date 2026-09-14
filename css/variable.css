@@ -2,6 +2,12 @@
     /* Primary font used for headings */
     --font-heading : "Barlow Condensed";
 
+    
+    --font-body : "Montserrat";
+
     /* padding used across header sections */
-    --main-padding : 0 3%;
+    --header-padding : 0 3%;
+
+    /* padding used across body sections */
+    --body-padding : 0 5%;
 }

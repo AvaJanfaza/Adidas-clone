@@ -45,7 +45,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--main-padding);
+    padding: var(--header-padding);
     position: sticky;
     top: 40px;
     left: 0;
@@ -222,4 +222,58 @@ nav{
     font-size: 20px;
     display: flex;
     align-items: center;
+}
+
+.latest-drops{
+    margin-top: 30px;
+    padding: var(--body-padding);
+}
+.latest-drops-title{
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    font-size: 2rem;
+}
+.latest-drops-grid{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+.drop-card{
+    height: 650px;
+}
+
+.drop-card:hover{
+    border: 1px solid black;
+}
+.drop-card > img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    padding: 2px;
+}
+.drop-card-description{
+    /* margin-top: 10px; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 3%;
+}
+.drop-card-description > p{
+    height: 30px;
+    font-family: var(--font-body);
+    font-weight: 100;
+    color: black;
+}
+.drop-card-description > h3{
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: black;
+}
+.drop-card-description > h5{
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: black;
 }
