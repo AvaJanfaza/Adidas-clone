@@ -10,6 +10,7 @@
 
 body{
     height: 3000px;
+    position: relative;
 }
 
 
@@ -26,6 +27,7 @@ body{
     right: 0;
     left: 0;
     z-index: 1001;
+    cursor: pointer;
 }
 .top-bar > p{
     color: white;
@@ -38,6 +40,70 @@ body{
     color: white;
     font-size: 30px;
 }
+
+/* Main modal container */
+.top-bar-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-end;
+    padding-bottom: 60px;
+    padding-left: 40px;
+
+    /* Hide the modal by default */
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Modal heading */
+.top-bar-modal > h3{
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+/* Modal description */
+.top-bar-modal > p{
+    font-family: var(--font-body);
+    font-weight: 100;
+}
+
+/* Join adiclub link */
+.top-bar-modal > a > span{
+    font-family: var(--font-body);
+    font-weight: 700;
+    display: inline;
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+/* change the link appearance on hover */
+.top-bar-modal > a > span:hover{
+    background-color: black;
+    color: white;
+}
+
+/* close button */
+.top-bar-modal > i{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* show the modal */
+.show-modal{
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 /* styling nav bar */
 nav{
     height: 80px;
@@ -224,10 +290,13 @@ nav{
     align-items: center;
 }
 
+
 .latest-drops{
     margin-top: 30px;
     padding: var(--body-padding);
 }
+
+/* section heading : "SHOP THE LATEST DROPS" */
 .latest-drops-title{
     font-family: var(--font-heading);
     font-weight: 700;
@@ -235,45 +304,73 @@ nav{
     word-spacing: 5px;
     font-size: 2rem;
 }
+
+/* Grid layout for the 4 products cards */
 .latest-drops-grid{
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
 }
+/* each product card - image + description */
 .drop-card{
+    display: flex;
+    flex-direction: column;
     height: 650px;
+    border: 2px solid transparent;
 }
 
+/* border appears on hover around the ENTIRE card */
 .drop-card:hover{
     border: 1px solid black;
 }
+
+/* product image */
 .drop-card > img{
     width: 100%;
     height: 80%;
     object-fit: cover;
     padding: 2px;
 }
+
+/* text block below the image  */
 .drop-card-description{
-    /* margin-top: 10px; */
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 3%;
 }
+
+/* text block description */
 .drop-card-description > p{
     height: 30px;
     font-family: var(--font-body);
     font-weight: 100;
     color: black;
 }
+
+/* text block title */
 .drop-card-description > h3{
     font-family: var(--font-body);
     font-weight: 700;
     color: black;
 }
+
 .drop-card-description > h5{
     font-family: var(--font-body);
     font-weight: 500;
     color: black;
+}
+
+.school-collection{
+    margin-top: 60px;
+    padding: var(--body-padding);
+}
+
+.school-collection-title{
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    font-size: 2rem;
 }
