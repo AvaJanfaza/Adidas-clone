@@ -20,4 +20,7 @@ window.addEventListener("click" , (e) => {
     if (!topBarModal.contains(e.target) && !topBar.contains(e.target)){
         topBarModal.classList.remove("show-modal");
     }
-})
+});
+
+
+
