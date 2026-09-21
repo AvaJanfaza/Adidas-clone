@@ -361,9 +361,10 @@ nav{
 }
 
 
+/* ___related resources section___ */
 .related-resources{
     margin-top: 100px;
-    padding: var(--body-padding);
+    padding: var(--body-padding); 
     position: relative;
 }
 .related-resources-title{
@@ -373,6 +374,8 @@ nav{
     word-spacing: 5px;
     font-size: 2rem;
 }
+
+/* horizontally scrollable row of resources cards */
 .related-resources-grid{
     overflow-x: auto;
     overflow-y: hidden;
@@ -412,15 +415,51 @@ nav{
     color: black;
     line-height: 1.5;
 }
+
+/* scroll button-always visible, positioned over the right edge of the row */
 .related-resources-scroll-btn{
     position: absolute;
     right: 5%;
     top: 50%;
-    transform: translate(-50%);
+    transform: translateY(-50%);
     background-color: white;
     border: 1px solid black;
     width: 50px;
     height: 50px;
     font-size: 20px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.related-resources-scroll-btn:hover{
+    background-color: whitesmoke;
+}
+
+
+/* category links section */
+.categories-section{
+    margin-top: 100px;
+    display: flex;
+    padding: 0px 6%;
+    gap: 240px;
+}
+.category-col > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.category-title{
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.category-col-items{
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: black;
+}
+.category-col-items:hover{
+    border-bottom: 1px solid black;
 }
