@@ -106,11 +106,12 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: var(--header-padding);
-    position: sticky;
+    position: fixed;
     top: 40px;
     left: 0;
     right: 0;
     z-index: 1001;
+    transition: all 1s;
 }
 .nav-logo > img{
     width: 65px;
@@ -379,7 +380,7 @@ nav{
     margin-top: 30px;
 }
 .resource-card{
-    width: 350px;
+    width: 340px;
     height: 400px;
     flex-shrink: 0;
 }
@@ -410,8 +411,8 @@ nav{
     line-height: 1.5;
 }
 
-/* scroll button-always visible, positioned over the right edge of the row */
-.related-resources-scroll-btn{
+/*right scroll button-always visible, positioned over the right edge of the row */
+.right-scroll-btn{
     position: absolute;
     right: 5%;
     top: 50%;
@@ -426,11 +427,40 @@ nav{
     align-items: center;
     justify-content: center;
 }
-.related-resources-scroll-btn:hover{
+.right-scroll-btn:hover{
+    background-color: whitesmoke;
+}
+.right-scroll-btn-hide{
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+/* left scroll icon - hidden by default, positioned over the left edge of the row */
+.left-scroll-btn{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.left-scroll-btn:hover{
     background-color: whitesmoke;
 }
 
-
+/* toggle class added via JS when the row has been scrolled right, to reveal the left icon */
+.left-scroll-btn-visible{
+    opacity: 1 !important;
+    visibility: visible !important;
+}
 /* category links section */
 .categories-section{
     margin-top: 100px;
@@ -492,6 +522,7 @@ nav{
     font-size: 0.9rem;
 }
 
+/* Top section of footer : green newsletter signup bar */
 .footer-signup{
     background-color: #408267;
     height: auto;
@@ -501,12 +532,16 @@ nav{
     padding: 4%;
     gap: 30px;
 }
+
+/* signup bar text */
 .footer-signup-text{
     font-family: var(--font-body);
     font-weight: 700;
     color: white;
     font-size: 1.4rem;
 }
+
+/* white signup button */
 .footer-signup-btn{
     position: relative;
     z-index: 1;
@@ -520,6 +555,8 @@ nav{
     align-items: center;
     font-size: 0.9rem;
 }
+
+/* white outline effect behind the button (color changes on hover) */
 .footer-signup-btn::after{
     content: "";
     position: absolute;
@@ -540,6 +577,7 @@ nav{
     font-size: 20px;
 }
 
+/* end of footer : 6 columns(support,company info,follow us...) on black background */
 .footer-columns{
     display: flex;
     gap: 100px;
@@ -547,6 +585,8 @@ nav{
     padding: 4% 6%;
     height: auto;
 }
+
+/* each column is laid out vertically : heading + list of links */
 .footer-column{
     display: flex;
     flex-direction: column;
@@ -557,13 +597,16 @@ nav{
     flex-direction: column;
     gap: 15px;
 }
+
+/* column heading */
 .footer-column > h4{
     color: white;
-    /* margin-bottom: 15px; */
     font-family: var(--font-body);
     font-weight: 700;
     font-size: 0.9rem;
 }
+
+/* each link item inside a column */
 .footer-column-item{
     color: white;
     font-family: var(--font-body);
@@ -573,10 +616,14 @@ nav{
 .footer-column-item:hover{
     border-bottom: 1px solid white;
 }
+
+/* social media icons (last column)-for icon-font icons(box icons , font awesome) */
 .footer-column-icons > i{
     color: white;
     font-size: 32px;
 }
+
+/* social media icons - for icons that are raw SVGs instead of icon fonts */
 .footer-column-icons svg{
     fill: white !important;
     width: 25px;
